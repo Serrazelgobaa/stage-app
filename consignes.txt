@@ -1,0 +1,33 @@
+Cahier des charges : 
+L'entreprise XXX propose un service d'aide à domicile dans le domaine du numérique au profit de personnes âgées. Un technicien se déplace à domicile et a besoin d'un outil web pour organiser ses tournées. 
+
+Créer une application web de gestion de visite client. 
+L'application doit permettre à l'utilisateur de gérer son planning de visite. 
+
+La dead-line est au 29 juillet où vous devrez présenter l'application au client. Une présentation de la maquette sera présenter au client le vendredi 12 juillet à 9h. 
+
+=============================== 
+L'application doit permettre à l'utilisateur de : 
+créer, modifier, afficher, supprimer un client 
+créer, modifier, afficher, supprimer une visite 
+créer, modifier, afficher, supprimer une prestation 
+
+La page d'accueil doit permettre d'afficher les 10 dernières visites programmées. 
+L'application doit permettre de d'afficher toutes les visites à partir d'une date. 
+L'application doit permettre de d'afficher toutes les visites déjà effectuées. 
+L'application doit permettre de d'afficher tous les clients qui n'ont pas encore payé.
+
+La page 'visite' doit permettre d'afficher le nom - prénom - l'adresse client - le type d'intervention - le tarif - la date de la visite - statut (payé/non-payé) 
+
+Une fonctionnalité doit permettre de localiser le lieu de visite sur une carte type Googlemap par exemple.
+
+L'application doit être responsive design 
+
+Contraintes techniques : 
+- HTML CSS JS(Jquery - Bootstrap - MD) 
+- Utiliser une base de données Mysql, modéliser la base de données (outil au choix, modèle conceptuel de données), créer le modèle physique de la base de donnée. 
+- Utiliser le langage de programmation back-end PHP.
+
+
+
+
