@@ -6,6 +6,8 @@
 	<title></title>
 </head>
 <body>
+	<header>
+	</header>
 
 <script type="text/javascript" src="main.js"></script>
 </body>
