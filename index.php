@@ -32,30 +32,42 @@
 
 
 		<section>
-			<h2>Dernières visites</h2>
+			<div class="section_body">
+				<h2>Dernières visites</h2>
 
-			<div class="carte_visite">
-				<div class="carte_body">
-					<h3>Mme Truc</h3>
-					<p>Prestation : Récupération de données</p>
-				</div>
+				<div class="carte_visite">
+					<div class="carte_body">
+						<h3>Mme Truc</h3>
+						<p>Prestation : Récupération de données</p>
+					</div>
 
-				<div class="carte_footer">
-					<p>20/05/2020</p>
+					<div class="carte_footer">
+						<p>20/05/2020</p>
+					</div>
 				</div>
+			</div>
+
+			<div class="section_footer">
+				<a href="gestion_visites.php">Toutes les visites >></a>
 			</div>
 		</section>
 		<section>
-			<h2>Impayés</h2>
-			<div class="carte_visite">
-				<div class="carte_body">
-					<p class="impaye">31€</p><h3>Installation d'imprimante</h3>
-					<p>Client : M. Bidule</p>
-				</div>
+			<div class="section_body">
+				<h2>Impayés</h2>
+				<div class="carte_visite">
+					<div class="carte_body">
+						<p class="impaye">31€</p><h3>Installation d'imprimante</h3>
+						<p>Client : M. Bidule</p>
+					</div>
 
-				<div class="carte_footer">
-					<p>Visite effectuée le 25/03/2019</p>
+					<div class="carte_footer">
+						<p>Visite effectuée le 25/03/2019</p>
+					</div>
 				</div>
+			</div>
+
+			<div class="section_footer">
+				<a href="gestion_visites.php">Tous les impayés >></a>
 			</div>
 		</section>
 	</main>
