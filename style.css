@@ -1,12 +1,118 @@
 body {
 	padding: 0;
 	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	color: rgba(0,0,0,0.87);
 }
 
 header {
 	width: 100%;
-	height: 540px;
+	height: 300px;
 	background-image: url(images/banniere.png);
 	background-repeat: no-repeat;
-	background-size: 100% 539px;
+	background-size: 100% 300px;
+	color: white;
+}
+
+nav {
+	width: 100%;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+nav img {
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+header h1 {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+
+#bande_icones {
+	height: 80px;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	position: relative;
+	bottom: 60px;
+}
+
+.icon_container {
+	width: 80px;
+	text-align: center;
+}
+
+.icon_container p {
+	margin-top: 0px;
+}
+
+#bande_icones a {
+	color: rgba(0,0,0,0.87);
+	text-decoration: none;
+}
+
+#bande_icones a:hover {
+	color: #565656;
+	font-weight: bold;
+}
+
+section {
+	width: 96%;
+	height: 300px;
+	margin-left: 2%;
+	margin-right: 2%;
+	background-color: #EEEEEE;
+	border-radius: 20px;
+	box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+	padding: 15px;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+}
+
+h2 {
+	font-weight: 400;
+	margin-top: 0;
+	font-size: 1.2em;
+}
+
+.carte_visite {
+	background-color: white;
+	height: 100px;
+	width: 100%;
+	box-shadow: 0px 3px 4px rgba(0,0,0,0.25);
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+h3 {
+	margin: 0;
+	font-weight: 500;
+	font-size: 1em;
+}
+
+.carte_body p {
+	opacity: 0.6;
+	font-size: 0.9em;
+}
+
+.carte_footer p {
+	text-align: right;
+	opacity: 0.6;
+	font-size: 0.8em;
+	font-weight: 500;
+}
+
+.carte_body p.impaye {
+	float: right;
+	color: #B00020;
+	margin-top: 0;
+	opacity: 1;
+	font-weight: 500;
+	font-size: 1.1em;
 }
