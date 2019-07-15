@@ -9,6 +9,9 @@ body {
 	background-color: #EEEEEE;
 }
 
+a {
+	text-decoration: none;
+}
 #clients_page {
 	width: 100%;
 	overflow-x: hidden; 
@@ -52,6 +55,37 @@ nav img {
 	margin-right: 10px;
 	cursor: pointer;
 }
+
+/* ////////////// MENU BURGER ///////////////////////// */
+#menu_hamburger {
+	position: fixed;
+	top: 0;
+	width: 70%;
+	height: 100%;
+	background-color: #fff;
+	z-index: 79;
+}
+
+#menu_options {
+	margin: 0;
+	padding: 0;
+}
+
+
+#menu_options a li {
+	display: block;
+	box-sizing: border-box;
+	padding-left: 20px;
+	font-size: 1em;
+	line-height: 50px;
+	color: rgba(0,0,0,0.90);
+}
+
+#menu_options a li:hover {
+	background-color: #eee;
+}
+
+/* ////////////// FIN MENU BURGER ///////////////////////// */
 
 header h1 {
 	text-align: center;

@@ -18,6 +18,18 @@
 		<h1>PapyNum</h1>
 	</header>
 
+	  <div id="menu_hamburger" class="hidden">
+        <ul id="menu_options">
+          <a href="index.php"><li>Accueil</li></a>
+          <hr>
+          <a href="gestion_clients.php"><li>Clients</li></a>
+          <hr>
+          <a href="gestion_visites.php"><li>Visites</li></a>
+          <hr>
+          <a href="gestion_prestas.php"><li>Prestations</li></a>
+        </ul>
+    </div>
+
 	<main>
 		<div id="bande_icones">
 			<a href="gestion_prestas.php"><div class="icon_container">
