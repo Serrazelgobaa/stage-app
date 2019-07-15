@@ -260,7 +260,7 @@ h3 {
 article {
 	width: 96%;
 	height: auto;
-	margin: 4% 2% 4% 2%;
+	margin: 7% 2% 4% 2%;
 	background-color: #EEEEEE;
 	border-radius: 20px;
 	box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
@@ -270,18 +270,20 @@ article {
 }
 
 .art_card {
+	margin-top: 40px;
+	margin-left: 2%;
+	margin-right: 2%;
 	background-color: #fff;
-	width: 100%;
-	height: auto;
+	width: 96%;
 	box-shadow: 6px 6px 4px rgba(0,0,0,0.20);
-	padding: 10px;
+	padding: 20px;
 	box-sizing: border-box;
 }
 
 .body_card p {
+	text-align: justify;
 	opacity: 0.6;
 	font-size: 0.9em;
-	margin-right: 120px; 
 }
 
 h2 {
@@ -290,10 +292,11 @@ h2 {
 	font-size: 1em;
 }
 
-.icon_card {
-	float: right;
+.card_header {
+	display: flex;
+	align-items: right;
+	justify-content: space-between;
 }
-
 .icon_card img {	
 	width: 30px;
 	height: 30px;
