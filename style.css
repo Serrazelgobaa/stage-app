@@ -82,10 +82,19 @@ nav img {
 }
 
 #menu_options a li:hover {
-	background-color: #eee;
+	background-color: #BBDEFB;
 }
-
 /* ////////////// FIN MENU BURGER ///////////////////////// */
+
+.noir {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+	cursor: pointer;
+	z-index: 70;
+}
 
 header h1 {
 	text-align: center;

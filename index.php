@@ -30,6 +30,8 @@
         </ul>
     </div>
 
+    <div class="noir"></div>
+    
 	<main>
 		<div id="bande_icones">
 			<a href="gestion_prestas.php"><div class="icon_container">
