@@ -64,7 +64,7 @@ nav img {
 	height: 100%;
 	background-color: #fff;
 	z-index: 79;
-	transition: width 0.4s ease-out;
+	transition: width 0.2s ease-out;
 }
 
 #menu_options {
