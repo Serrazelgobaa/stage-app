@@ -20,7 +20,7 @@
 
 	<main id="clients_slider">
 		<div class="container_clients">
-			<h2>Clients</h2>
+			<h2 class="titre_client">Clients</h2>
 
 			<div class="client">
 				<h4 id="client1">Nom Prénom</h4>
