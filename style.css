@@ -64,6 +64,7 @@ nav img {
 	height: 100%;
 	background-color: #fff;
 	z-index: 79;
+	transition: width 0.4s ease-out;
 }
 
 #menu_options {
@@ -86,7 +87,7 @@ nav img {
 }
 /* ////////////// FIN MENU BURGER ///////////////////////// */
 
-.noir {
+#noir {
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -94,6 +95,14 @@ nav img {
 	background-color: rgba(0,0,0,0.6);
 	cursor: pointer;
 	z-index: 70;
+}
+
+#noir.hidden {
+	display: none;
+}
+#menu_hamburger.hidden {
+	width: 0;
+	overflow: hidden;
 }
 
 header h1 {

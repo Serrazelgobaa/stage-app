@@ -10,7 +10,7 @@
 	<header>
 		<nav>
 			<div id="align-left">
-				<img src="images/menu_hamburger.png" height="36px" width="36px">
+				<img id="btn_burger" src="images/menu_hamburger.png" height="36px" width="36px">
 				<a href="#"><img src="images/logo-blanc.png" height="30px" width="45px"></a>
 			</div>
 			<img src="images/menu_profil.png" height="36px" width="36px">
@@ -30,8 +30,8 @@
         </ul>
     </div>
 
-    <div class="noir"></div>
-    
+    <div id="noir" class="hidden"></div>
+
 	<main>
 		<div id="bande_icones">
 			<a href="gestion_prestas.php"><div class="icon_container">
@@ -86,6 +86,6 @@
 		</section>
 	</main>
 
-<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

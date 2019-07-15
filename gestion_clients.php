@@ -75,6 +75,7 @@
 		</div>
 	</main>
 
-<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/clients.js"></script>
 </body>
 </html>
