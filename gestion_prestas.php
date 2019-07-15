@@ -8,25 +8,25 @@
 <body class="grey">
 	<nav id="tiny_bar">
 		<div id="align-left">
-				<img src="images/menu_hamburger.png" height="36px" width="36px">
-				<a href="index.php"><img src="images/logo-blanc.png" height="30px" width="45px"></a>
-			</div>
+			<img src="images/menu_hamburger.png" height="36px" width="36px">
+			<a href="index.php"><img src="images/logo-blanc.png" height="30px" width="45px"></a>
+		</div>
 			<img src="images/menu_profil.png" height="36px" width="36px">
 	</nav>
+
 	<div id="create">
 		<a href="#" id="create_button"><img src="images/add_circle.png">Nouvelle prestation</a>
 	</div>
 
-
-	
-		<div class="art_card">
-			<div class="icon_card">
-					<img src="./images/edit.png">
-					<img src="./images/delete.png">
-				</div>
+	<div class="art_card">
+		<div class="card_header">
 			<h2>Mise à jour : systèmes, logiciels</h2>
+			<div class="icon_card">
+				<img src="./images/edit.png">
+				<img src="./images/delete.png">
+			</div>
+		</div>
 			<div class="body_card">
-				
 				<p>Vita est illis semper in fuga uxoresque mercenariae conductae ad tempus ex pacto atque, ut sit species matrimonii, dotis nomine futura coniunx hastam et tabernaculum offert marito, post statum diem si id elegerit discessura, et incredibile est quo ardore apud eos in venerem uterque solvitur sexus.<br/>
 				
 				Post quorum necem nihilo lenius ferociens Gallus ut leo cadaveribus pastus multa huius modi scrutabatur. quae singula narrare non refert, me professione modum, quod evitandum est, excedamus.
@@ -34,7 +34,7 @@
 
 				<h3>Tarif : 45€ </h3>
 			</div>	
-		</div>
+	</div>
 	
 
 <script type="text/javascript" src="main.js"></script>
