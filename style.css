@@ -5,6 +5,15 @@ body {
 	color: rgba(0,0,0,0.87);
 }
 
+.grey {
+	background-color: #EEEEEE;
+}
+
+#clients_page {
+	width: 100%;
+	overflow-x: hidden; 
+}
+
 header {
 	width: 100%;
 	height: 300px;
@@ -14,12 +23,28 @@ header {
 	color: white;
 }
 
+#croix {
+	float: right;
+	opacity: 0.6;
+	cursor: pointer;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+#croix:hover {
+	opacity: 1;
+}
+
 nav {
 	width: 100%;
 	height: 60px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+}
+
+#tiny_bar {
+	background: linear-gradient(0.25turn, #1A237E, #2196F3);
 }
 
 nav img {
@@ -41,6 +66,40 @@ header h1 {
 	justify-content: space-around;
 	position: relative;
 	bottom: 60px;
+}
+
+#create {
+	background-color: #BBDEFB;
+	width: 100%;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	box-shadow: 0px 5px 4px rgba(0,0,0,0.15);
+}
+
+#create_button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	text-decoration: none;
+	background-color: #00E676;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 25px;
+	box-sizing: border-box;
+	padding-left: 25px;
+	padding-right: 25px;
+	font-weight: 500;
+	box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+	margin-right: 20px;
+}
+
+#create_button img {
+	width: 36px;
+	height: 36px;
+	margin-right: 10px;
 }
 
 .icon_container {
@@ -73,6 +132,62 @@ section {
 	padding: 15px;
 	box-sizing: border-box;
 	margin-bottom: 20px;
+}
+
+main#clients_slider {
+	display: flex;
+	flex-wrap: nowrap;
+	width: 200%
+}
+
+.container_clients {
+	width: 96%;
+	margin-left: 2%;
+	margin-right: 2%;
+	background-color: white;
+	box-sizing: border-box;
+	margin-top: 40px;
+	box-shadow: 5px 5px 4px rgba(0,0,0,0.2);
+}
+
+.container_clients h2 {
+	text-align: center;
+	margin-top: 40px;
+	font-weight: 700;
+}
+
+.info_client {
+	display: flex;
+	align-items: center;
+	padding-left: 20px;
+	box-sizing: border-box;
+}
+
+.info_client p {
+	margin-left: 30px;
+}
+
+.client {
+	width: 100%;
+	height: 90px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-sizing: border-box;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+hr {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	width: 80%;
+	opacity: 0.5;
+}
+
+.client h4 {
+	font-weight: 500;
+	cursor: pointer;
 }
 
 .section_body {
