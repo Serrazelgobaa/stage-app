@@ -253,3 +253,57 @@ h3 {
 	font-weight: 500;
 	font-size: 1.1em;
 }
+
+/* ////////////  PAGE PRESTA /////////////////////////////////////// */
+
+
+article {
+	width: 96%;
+	height: auto;
+	margin: 4% 2% 4% 2%;
+	background-color: #EEEEEE;
+	border-radius: 20px;
+	box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+	padding: 25px;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+}
+
+.art_card {
+	background-color: #fff;
+	width: 100%;
+	height: auto;
+	box-shadow: 6px 6px 4px rgba(0,0,0,0.20);
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.body_card p {
+	opacity: 0.6;
+	font-size: 0.9em;
+	margin-right: 120px; 
+}
+
+h2 {
+	margin: 0;
+	font-weight: 500;
+	font-size: 1em;
+}
+
+.icon_card {
+	float: right;
+}
+
+.icon_card img {	
+	width: 30px;
+	height: 30px;
+}
+
+
+
+
+
+
+
+
+/* ////////////   FIN PAGE PRESTA /////////////////////////////////////// */
