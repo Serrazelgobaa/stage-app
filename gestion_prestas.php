@@ -8,11 +8,27 @@
 <body class="grey">
 	<nav id="tiny_bar">
 		<div id="align-left">
-			<img src="images/menu_hamburger.png" height="36px" width="36px">
+			<img id="btn_burger" src="images/menu_hamburger.png" height="36px" width="36px">
 			<a href="index.php"><img src="images/logo-blanc.png" height="30px" width="45px"></a>
 		</div>
 			<img src="images/menu_profil.png" height="36px" width="36px">
 	</nav>
+
+
+	  <div id="menu_hamburger" class="hidden">
+        <ul id="menu_options">
+          <a href="index.php"><li>Accueil</li></a>
+          <hr>
+          <a href="gestion_clients.php"><li>Clients</li></a>
+          <hr>
+          <a href="gestion_visites.php"><li>Visites</li></a>
+          <hr>
+          <a href="gestion_prestas.php"><li>Prestations</li></a>
+        </ul>
+    </div>
+
+    <div id="noir" class="hidden"></div>
+    
 
 	<div id="create">
 		<a href="#" id="create_button"><img src="images/add_circle.png">Nouvelle prestation</a>
