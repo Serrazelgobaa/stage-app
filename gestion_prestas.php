@@ -20,7 +20,7 @@
 
 	<div class="art_card">
 		<div class="card_header">
-			<h2>Mise à jour : systèmes, logiciels</h2>
+			<h2 class="titre_client">Mise à jour : systèmes, logiciels</h2>
 			<div class="icon_card">
 				<img src="./images/edit.png">
 				<img src="./images/delete.png">
