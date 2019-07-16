@@ -48,6 +48,8 @@ nav {
 
 #tiny_bar {
 	background: linear-gradient(0.25turn, #1A237E, #2196F3);
+	position: fixed;
+	z-index: 60;
 }
 
 nav img {
@@ -128,9 +130,12 @@ header h1 {
 	align-items: center;
 	justify-content: flex-end;
 	box-shadow: 0px 5px 4px rgba(0,0,0,0.15);
+	position: absolute;
+	top: 60px;
 }
 
 #create_button {
+	max-width: 240px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -360,8 +365,74 @@ article {
 
 
 
-
-
-
-
 /* ////////////   FIN PAGE PRESTA /////////////////////////////////////// */
+
+
+
+/* ////////////  PAGE VISITES /////////////////////////////////////// */
+
+aside {
+	background-color: #BBDEFB;
+	width: 100%;
+	text-align: center;
+	box-sizing: border-box;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	position: fixed;
+	z-index: 68;
+}
+
+aside.hidden {
+	width: 0px;
+	overflow: hidden;
+}
+
+#croix2.hidden {
+	display: none;
+}
+
+aside #create_button {
+	margin: auto;
+	margin-bottom: 30px;
+}
+
+input#create_button {
+	border: 0;
+	width: 120px;
+	font-weight: 500;
+	font-size: 1em;
+	margin-top: 30px;
+}
+
+input[type=radio] {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#croix2 {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	opacity: 0.6;
+}
+
+#croix2:hover {
+	opacity: 1;
+}
+
+#btn_float {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 67;
+	width: 80px;
+	height: 80px;
+	background-color: #00E676;
+	border-radius: 40px;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* ////////////   FIN PAGE VISITES /////////////////////////////////////// */
