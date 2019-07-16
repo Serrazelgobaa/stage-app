@@ -18,7 +18,13 @@
 					<a href="gestion_prestas.php"><li>Prestations</li></a>
 				</ul>
 		</div>
-			<img src="images/menu_profil.png" height="36px" width="36px">
+		<div id="align-right">
+			<ul id="login">
+				<a href="#"><li>Connexion</li></a>
+				<a href="#"><li id="btn_signup">Inscription</li></a>
+			</ul>
+			<img src="images/menu_profil.png" height="36px" width="36px" id="menu_profil">
+		</div>
 	</nav>
 
 

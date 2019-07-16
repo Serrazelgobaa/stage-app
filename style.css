@@ -26,6 +26,10 @@ header {
 	color: white;
 }
 
+header p {
+	display: none;
+}
+
 #croix {
 	float: right;
 	opacity: 0.6;
@@ -66,6 +70,10 @@ nav img {
 	margin-left: 10px;
 	margin-right: 10px;
 	cursor: pointer;
+}
+
+#login {
+	display: none;
 }
 
 /* ////////////// MENU BURGER ///////////////////////// */
@@ -484,6 +492,69 @@ input[type=radio] {
 		color: white;
 	}
 
+	#menu_profil {
+		display: none;
+	}
+
+	#login {
+		display: flex;
+		margin: 0;
+		padding: 0;
+		margin-right: 30px;
+		align-items: center;
+	}
+
+	#login li {
+		display: flex;
+		align-items: center;
+		line-height: 60px;
+		padding-left: 20px;
+		padding-right: 20px;
+		font-weight: 500;
+	}
+
+	#login a {
+		color: rgba(255,255,255,0.7);
+	}
+
+	#login a:hover {
+		color: white;
+	}
+
+	#btn_signup {
+		background-color: #00E676;
+		border-radius: 20px;
+		height: 45px;
+		color: white;
+	}
+
+	#btn_signup:hover {
+		background-color: #1ab268;
+	}
+
+	header {
+		height: 400px;
+		background-size: 100% 400px;
+	}
+
+	header p {
+		display: block;
+		text-align: center;
+	}
+
+	#bande_icones {
+		justify-content: center;
+		bottom: 100px;
+	}
+
+	.icon_container {
+		margin-left: 40px;
+		margin-right: 40px;
+	}
+
+	#accueil {
+		display: flex;
+	}
 
 
 }

@@ -21,9 +21,16 @@
 				</ul>
 
 			</div>
-			<img src="images/menu_profil.png" height="36px" width="36px">
+			<div id="align-right">
+				<ul id="login">
+					<a href="#"><li>Connexion</li></a>
+					<a href="#"><li id="btn_signup">Inscription</li></a>
+				</ul>
+				<img src="images/menu_profil.png" height="36px" width="36px" id="menu_profil">
+			</div>
 		</nav>
 		<h1>PapyNum</h1>
+		<p>Cette application permet de gérer des visites à domicile de clients en demande d’apprentissage numérique.</p>
 	</header>
 
 	  <div id="menu_hamburger" class="hidden">
@@ -52,46 +59,47 @@
 			</div></a>
 		</div>
 
+		<div id="accueil">
+			<section>
+				<div class="section_body">
+					<h2>Dernières visites</h2>
 
-		<section>
-			<div class="section_body">
-				<h2>Dernières visites</h2>
+					<div class="carte_visite">
+						<div class="carte_body">
+							<h3>Mme Truc</h3>
+							<p>Prestation : Récupération de données</p>
+						</div>
 
-				<div class="carte_visite">
-					<div class="carte_body">
-						<h3>Mme Truc</h3>
-						<p>Prestation : Récupération de données</p>
-					</div>
-
-					<div class="carte_footer">
-						<p>20/05/2020</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="section_footer">
-				<a href="gestion_visites.php">Toutes les visites >></a>
-			</div>
-		</section>
-		<section>
-			<div class="section_body">
-				<h2>Impayés</h2>
-				<div class="carte_visite">
-					<div class="carte_body">
-						<p class="impaye">31€</p><h3>Installation d'imprimante</h3>
-						<p>Client : M. Bidule</p>
-					</div>
-
-					<div class="carte_footer">
-						<p>Visite effectuée le 25/03/2019</p>
+						<div class="carte_footer">
+							<p>20/05/2020</p>
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="section_footer">
-				<a href="gestion_visites.php">Tous les impayés >></a>
-			</div>
-		</section>
+				<div class="section_footer">
+					<a href="gestion_visites.php">Toutes les visites >></a>
+				</div>
+			</section>
+			<section>
+				<div class="section_body">
+					<h2>Impayés</h2>
+					<div class="carte_visite">
+						<div class="carte_body">
+							<p class="impaye">31€</p><h3>Installation d'imprimante</h3>
+							<p>Client : M. Bidule</p>
+						</div>
+
+						<div class="carte_footer">
+							<p>Visite effectuée le 25/03/2019</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="section_footer">
+					<a href="gestion_visites.php">Tous les impayés >></a>
+				</div>
+			</section>
+		</div>
 	</main>
 
 <script type="text/javascript" src="js/main.js"></script>
