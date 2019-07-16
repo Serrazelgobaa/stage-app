@@ -379,12 +379,15 @@ aside {
 	padding-top: 30px;
 	padding-bottom: 30px;
 	position: fixed;
+	right: 0;
 	z-index: 68;
+	transition: width 0.3s ease-out;
+	overflow: hidden;
 }
 
 aside.hidden {
 	width: 0px;
-	overflow: hidden;
+	
 }
 
 #croix2.hidden {
@@ -414,6 +417,7 @@ input[type=radio] {
 	top: 10px;
 	right: 10px;
 	opacity: 0.6;
+	cursor: pointer;
 }
 
 #croix2:hover {
@@ -433,6 +437,7 @@ input[type=radio] {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	cursor: pointer;
 }
 
 /* ////////////   FIN PAGE VISITES /////////////////////////////////////// */
