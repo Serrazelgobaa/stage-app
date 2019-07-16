@@ -401,6 +401,7 @@ aside {
 	padding-bottom: 30px;
 	position: fixed;
 	right: 0;
+	top:0;
 	z-index: 68;
 	transition: width 0.3s ease-out;
 	overflow: hidden;
@@ -426,6 +427,10 @@ input#create_button {
 	font-weight: 500;
 	font-size: 1em;
 	margin-top: 30px;
+}
+
+#create_button2 {
+	display: none;
 }
 
 input[type=radio] {
@@ -554,6 +559,48 @@ input[type=radio] {
 
 	#accueil {
 		display: flex;
+	}
+
+	aside.hidden {
+		display: block;
+		position: static;
+		width: 30%;
+		height: 100%;
+		margin-top: 60px;
+	}
+
+	#create {
+		display: none;
+	}
+
+	#btn_float {
+		display: none;
+	}
+
+	#create_button2 {
+		margin: auto;
+		margin-bottom: 30px;
+		max-width: 240px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		text-decoration: none;
+		background-color: #00E676;
+		height: 50px;
+		line-height: 50px;
+		border-radius: 25px;
+		box-sizing: border-box;
+		padding-left: 25px;
+		padding-right: 25px;
+		font-weight: 500;
+		box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+	}
+
+	#create_button2 img {
+	width: 36px;
+	height: 36px;
+	margin-right: 10px;
 	}
 
 

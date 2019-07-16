@@ -19,7 +19,13 @@
 					<a href="gestion_prestas.php"><li>Prestations</li></a>
 			</ul>
 		</div>
-			<img src="images/menu_profil.png" height="36px" width="36px">
+			<div id="align-right">
+				<ul id="login">
+					<a href="#"><li>Connexion</li></a>
+					<a href="#"><li id="btn_signup">Inscription</li></a>
+				</ul>
+				<img src="images/menu_profil.png" height="36px" width="36px" id="menu_profil">
+			</div>
 	</nav>
 
 
@@ -43,6 +49,8 @@
     
     <aside class="hidden">
     	<img src="images/croix.png" id="croix2" width="40px" height="40px" class="hidden">
+
+    	<a href="#" id="create_button2"><img src="images/add_circle.png">Nouvelle visite</a>
     	<h3>Filtres</h3>
     	<form action="gestion_visites.php" method="post">
 
@@ -80,7 +88,7 @@
    		<img src="images/tune.png" width="50px" height="50px">
    	</div>
 
-   	<main class="marge-top">
+   	<main>
 
    	</main>
 
