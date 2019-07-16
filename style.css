@@ -46,10 +46,20 @@ nav {
 	justify-content: space-between;
 }
 
+#align-left {
+	display: flex;
+	align-items: center;
+}
+
+ul#menu_nav {
+	display: none;
+}
+
 #tiny_bar {
 	background: linear-gradient(0.25turn, #1A237E, #2196F3);
 	position: fixed;
 	z-index: 60;
+	top: 0px;
 }
 
 nav img {
@@ -120,6 +130,10 @@ header h1 {
 	justify-content: space-around;
 	position: relative;
 	bottom: 60px;
+}
+
+main.marge-top {
+	margin-top: 190px;
 }
 
 #create {
@@ -203,7 +217,6 @@ main#clients_slider {
 	margin-right: 2%;
 	background-color: white;
 	box-sizing: border-box;
-	margin-top: 40px;
 	box-shadow: 5px 5px 4px rgba(0,0,0,0.2);
 }
 
@@ -441,3 +454,36 @@ input[type=radio] {
 }
 
 /* ////////////   FIN PAGE VISITES /////////////////////////////////////// */
+
+@media screen and (min-width: 1000px) {
+
+	#btn_burger {
+		display: none;
+	}
+
+	ul#menu_nav {
+		display: flex;
+		flex-wrap: nowrap;
+		margin: 0;
+		padding: 0;
+	}
+
+	#menu_nav li {
+		display: inline-block;
+		line-height: 60px;
+		padding-left: 30px;
+		padding-right: 30px;
+		font-weight: 500;
+	}
+
+	#menu_nav a {
+		color: rgba(255,255,255,0.7);
+	}
+
+	#menu_nav a:hover {
+		color: white;
+	}
+
+
+
+}

@@ -12,6 +12,12 @@
 		<div id="align-left">
 				<img id="btn_burger" src="images/menu_hamburger.png" height="36px" width="36px">
 				<a href="index.php"><img src="images/logo-blanc.png" height="30px" width="45px"></a>
+
+				<ul id="menu_nav">
+					<a href="gestion_clients.php"><li>Clients</li></a>
+					<a href="gestion_visites.php"><li>Visites</li></a>
+					<a href="gestion_prestas.php"><li>Prestations</li></a>
+				</ul>
 			</div>
 			<img src="images/menu_profil.png" height="36px" width="36px">
 	</nav>
@@ -35,7 +41,7 @@
 		<a href="#" id="create_button"><img src="images/add_circle.png">Nouveau client</a>
 	</div>
 
-	<main id="clients_slider">
+	<main id="clients_slider" class="marge-top">
 		<div class="container_clients">
 			<h2 class="titre_client">Clients</h2>
 
