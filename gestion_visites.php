@@ -43,7 +43,7 @@
 
     <div id="noir" class="hidden"></div>
 
-    <div id="create">
+    <div id="create" class="create_hidden">
     	<a href="#" id="create_button"><img src="images/add_circle.png">Nouvelle visite</a>
     </div>
     

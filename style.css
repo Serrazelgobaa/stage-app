@@ -569,7 +569,7 @@ input[type=radio] {
 		margin-top: 60px;
 	}
 
-	#create {
+	#create.create_hidden {
 		display: none;
 	}
 
