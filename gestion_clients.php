@@ -8,43 +8,14 @@
 	<title></title>
 </head>
 <body class="grey" id="clients_page">
-	<nav id="tiny_bar">
-		<div id="align-left">
-				<img id="btn_burger" src="images/menu_hamburger.png" height="36px" width="36px">
-				<a href="index.php"><img src="images/logo-blanc.png" height="30px" width="45px"></a>
-
-				<ul id="menu_nav">
-					<a href="gestion_clients.php"><li>Clients</li></a>
-					<a href="gestion_visites.php"><li>Visites</li></a>
-					<a href="gestion_prestas.php"><li>Prestations</li></a>
-				</ul>
-			</div>
-			<div id="align-right">
-				<ul id="login">
-					<a href="#"><li>Connexion</li></a>
-					<a href="#"><li id="btn_signup">Inscription</li></a>
-				</ul>
-				<img src="images/menu_profil.png" height="36px" width="36px" id="menu_profil">
-			</div>
-	</nav>
-
-
-	  <div id="menu_hamburger" class="hidden">
-        <ul id="menu_options">
-          <a href="index.php"><li>Accueil</li></a>
-          <hr>
-          <a href="gestion_clients.php"><li>Clients</li></a>
-          <hr>
-          <a href="gestion_visites.php"><li>Visites</li></a>
-          <hr>
-          <a href="gestion_prestas.php"><li>Prestations</li></a>
-        </ul>
-    </div>
-
-    <div id="noir" class="hidden"></div>
+	
+<?php 
+  include 'components/nav_menu.php';
+  include 'components/modals.php';
+?>
     
 	<div id="create">
-		<a href="#" id="create_button"><img src="images/add_circle.png">Nouveau client</a>
+		<a href="#" id="create_button" class="create_client"><img src="images/add_circle.png">Nouveau client</a>
 	</div>
 
 	<main id="clients_slider" class="marge-top">
@@ -106,5 +77,6 @@
 
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/clients.js"></script>
+<script type="text/javascript" src="js/modal.js"></script>
 </body>
 </html>
