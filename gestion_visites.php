@@ -66,5 +66,6 @@
 
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/visites.js"></script>
+<script type="text/javascript" src="js/modal.js"></script>
 </body>
 </html>

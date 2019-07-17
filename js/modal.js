@@ -27,7 +27,6 @@ if (button.classList.contains('create_client')) {
 }
 
 else if (button.classList.contains('create_visite')){
-	console.log('autre');
 	button.addEventListener('click', ouvrirCreerVisite);
 	document.getElementById('croix4').addEventListener('click',fermerCreerVisite);
 	document.getElementById('noir_modal').addEventListener('click',fermerCreerVisite);
