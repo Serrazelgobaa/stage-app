@@ -1,3 +1,7 @@
+<?php 
+	include 'bdd.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -64,6 +68,16 @@
 			<section>
 				<div class="section_body">
 					<h2>Dernières visites</h2>
+
+					<?php
+						$sql = "SELECT * FROM visites LIMIT 5 JOIN clients ON visites.clients_id=clients.id";
+						$resultat = mysqli_query($connexion, $sql);
+
+							while($visite = mysqli_fetch_assoc($resultat)) {
+								echo $visite['prix_total'];
+							}
+						
+					?>
 
 					<div class="carte_visite">
 						<div class="carte_body">
