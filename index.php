@@ -70,25 +70,22 @@
 					<h2>Dernières visites</h2>
 
 					<?php
-						$sql = "SELECT * FROM visites LIMIT 5 JOIN clients ON visites.clients_id=clients.id";
+						$sql = "SELECT visites.*, clients.nom AS client_nom, clients.prenom AS client_prenom FROM visites INNER JOIN clients ON visites.clients_id=clients.id LIMIT 5";
 						$resultat = mysqli_query($connexion, $sql);
 
 							while($visite = mysqli_fetch_assoc($resultat)) {
-								echo $visite['prix_total'];
+								echo "<div class=\"carte_visite\"><div class=\"carte_body\"><h3>";
+								echo $visite['client_nom'];
+								echo " ";
+								echo $visite['client_prenom'];
+								echo "</h3>";
+								echo "<p>Prestation : Récupération de données</p>";
+								echo "</div><div class=\"carte_footer\"><p>";
+								echo $visite['date'];
+								echo "</p></div></div>";
 							}
 						
 					?>
-
-					<div class="carte_visite">
-						<div class="carte_body">
-							<h3>Mme Truc</h3>
-							<p>Prestation : Récupération de données</p>
-						</div>
-
-						<div class="carte_footer">
-							<p>20/05/2020</p>
-						</div>
-					</div>
 				</div>
 
 				<div class="section_footer">
