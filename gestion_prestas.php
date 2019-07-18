@@ -1,3 +1,7 @@
+<?php
+	include 'bdd.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,35 +14,37 @@
 	
 <?php 
   include 'components/nav_menu.php';
+  include 'components/modals.php';
 ?>
 
 	<div id="create">
-		<a href="#" id="create_button"><img src="images/add_circle.png">Nouvelle prestation</a>
+		<a href="#" id="create_button" class="create_presta"><img src="images/add_circle.png">Nouvelle prestation</a>
 	</div>
 
 	<main class="marge-top">
 
-		<div class="art_card">
-			<div class="card_header">
-				<h2 class="titre_client">Mise à jour : systèmes, logiciels</h2>
-				<div class="icon_card">
-					<img src="./images/edit.png">
-					<img src="./images/delete.png">
-				</div>
-			</div>
-				<div class="body_card">
-					<p>Vita est illis semper in fuga uxoresque mercenariae conductae ad tempus ex pacto atque, ut sit species matrimonii, dotis nomine futura coniunx hastam et tabernaculum offert marito, post statum diem si id elegerit discessura, et incredibile est quo ardore apud eos in venerem uterque solvitur sexus.<br/>
-					
-					Post quorum necem nihilo lenius ferociens Gallus ut leo cadaveribus pastus multa huius modi scrutabatur. quae singula narrare non refert, me professione modum, quod evitandum est, excedamus.
-					</p>
+				<?php 
 
-					<h3>Tarif : 45€ </h3>
-				</div>	
-		</div>
+					$sql = "SELECT * FROM prestations";
+					$resultat = mysqli_query($connexion, $sql);
 
+					while($prestation = mysqli_fetch_assoc($resultat)) {
+						echo "<div class=\"art_card\"><div class=\"card_header\">";
+						echo "<h2 class=\"titre_client\">";
+						echo utf8_encode($prestation['nom']);
+						echo "</h2><div class=\"icon_card\"><img src=\"./images/edit.png\"><img src=\"./images/delete.png\"></div></div>";
+						echo "<div class=\"body_card\"><p>";
+						echo utf8_encode($prestation['description']);
+						echo "</p>";
+						echo "<h3>Tarif : ";
+						echo utf8_encode($prestation['prix']);
+						echo " €</h3></div></div>";
+					}
+				?>
 	</main>
 	
 
 <script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/modal.js"></script>
 </body>
 </html>
