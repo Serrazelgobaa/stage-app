@@ -60,7 +60,7 @@
 						echo "<div class=\"art_card\"><div class=\"card_header\">";
 						echo "<h2 class=\"titre_client\">";
 						echo utf8_encode($prestation['nom']);
-						echo "</h2><div class=\"icon_card\"><img src=\"./images/edit.png\"><img src=\"./images/delete.png\"></div></div>";
+						echo "</h2><div class=\"icon_card\"><img src=\"./images/edit.png\"><a href=\"gestion_prestas.php?delete=".$prestation['id']."\"><img src=\"./images/delete.png\"></a></div></div>";
 						echo "<div class=\"body_card\"><p>";
 						echo utf8_encode($prestation['description']);
 						echo "</p>";

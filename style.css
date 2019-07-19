@@ -352,10 +352,18 @@ article {
 	align-items: right;
 	justify-content: space-between;
 }
+
 .icon_card img {	
 	width: 30px;
 	height: 30px;
+	opacity: 0.6;
+	cursor: pointer;
 }
+
+.icon_card img:hover {	
+	opacity: 1;
+}
+
 .icon_card {
 	display: flex;
 	flex-wrap: nowrap;
