@@ -9,6 +9,32 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="./style.css">
 	<title></title>
+	<?php
+	if(isset($_POST['create'])) {
+  	 	echo "<meta http-equiv='refresh' content='0'>";
+  	  }
+
+  	if(isset($_GET['create'])) {
+  						
+  						$create = $_GET['create'];
+
+  						if($create === "true") {
+
+  							$presta_nom = utf8_decode(htmlspecialchars($_POST['nv_presta_nom']));
+  							$presta_desc = utf8_decode(htmlspecialchars($_POST['nv_presta_desc']));
+  							$presta_prix = utf8_decode(htmlspecialchars($_POST['nv_presta_prix']));
+
+  				
+
+  							$sql_insertion = "INSERT INTO prestations (nom,prix,description) VALUES('".$presta_nom."',".$presta_prix.",'".$presta_desc."')";
+
+  							mysqli_query($connexion, $sql_insertion); 
+
+  				
+  						}
+
+  					}
+  	?>
 </head>
 <body class="grey">
 	
@@ -43,20 +69,7 @@
 						echo " €</h3></div></div>";
 					}
 
-
-					if(isset($_GET['create'])) {
-  						$create = $_GET['create'];
-
-  						if($create === "true") {
-
-  							$presta_nom = htmlspecialchars($_POST['nv_presta_nom']);
-  							$presta_desc = htmlspecialchars($_POST['nv_presta_desc']);
-  							$presta_prix = htmlspecialchars($_POST['nv_presta_prix']);
-
-  							mysqli_query($connexion, "INSERT INTO prestations (nom,prix,description) VALUES(".$presta_nom.",".$presta_prix.",".$presta_desc.")");
-  						}
-
-  					}
+	
 
 				?>
 	</main>

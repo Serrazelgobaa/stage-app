@@ -43,7 +43,7 @@
 		<label for="nv_presta_desc" name="nv_presta_desc">Description : </label><br><textarea name="nv_presta_desc" id="nv_presta_nom"></textarea><br>
 		<label for="nv_presta_prix" name="nv_presta_prix">Tarif : </label><br><input type="text" name="nv_presta_prix" id="nv_presta_prix"> €<br>
 		
-		<input type="submit" value="Ajouter la prestation" class="submit_modal">
+		<input type="submit" value="Ajouter la prestation" class="submit_modal" name="submit">
 
 	</form>
 </div>
