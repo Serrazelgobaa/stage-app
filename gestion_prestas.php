@@ -15,6 +15,8 @@
 <?php 
   include 'components/nav_menu.php';
   include 'components/modals.php';
+
+  
 ?>
 
 	<div id="create">
@@ -40,6 +42,22 @@
 						echo utf8_encode($prestation['prix']);
 						echo " €</h3></div></div>";
 					}
+
+
+					if(isset($_GET['create'])) {
+  						$create = $_GET['create'];
+
+  						if($create === "true") {
+
+  							$presta_nom = htmlspecialchars($_POST['nv_presta_nom']);
+  							$presta_desc = htmlspecialchars($_POST['nv_presta_desc']);
+  							$presta_prix = htmlspecialchars($_POST['nv_presta_prix']);
+
+  							mysqli_query($connexion, "INSERT INTO prestations (nom,prix,description) VALUES(".$presta_nom.",".$presta_prix.",".$presta_desc.")");
+  						}
+
+  					}
+
 				?>
 	</main>
 	

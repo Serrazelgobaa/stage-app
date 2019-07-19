@@ -37,7 +37,7 @@
 
 <div id="modal_creation_presta" class="hidden">
 	<img src="images/croix.png" id="croix5" width="35px" height="35px">
-	<form action="gestion_prestas.php" method="post">
+	<form action="gestion_prestas.php?create=true" method="post">
 		<h2>Nouvelle prestation</h2>
 		<label for="nv_presta_nom" name="nv_presta_nom">Nom : </label><br><input type="text" name="nv_presta_nom" id="nv_presta_nom"><br>
 		<label for="nv_presta_desc" name="nv_presta_desc">Description : </label><br><textarea name="nv_presta_desc" id="nv_presta_nom"></textarea><br>
