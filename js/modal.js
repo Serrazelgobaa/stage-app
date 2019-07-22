@@ -49,4 +49,3 @@ else if (button.classList.contains('create_presta')){
 	document.getElementById('croix5').addEventListener('click',fermerCreerPresta);
 	document.getElementById('noir_modal').addEventListener('click',fermerCreerPresta);
 }
-

@@ -655,7 +655,7 @@ input[type=radio] {
 	margin-bottom: 5px;
 }
 
-#croix5, #croix4 {
+#croix5, #croix4, #croix6 {
 	float: right;
 	opacity: 0.6;
 	margin-right: 5px;
@@ -663,10 +663,46 @@ input[type=radio] {
 	cursor: pointer;
 }
 
-#croix5:hover, #croix4:hover {
+#croix5:hover, #croix4:hover, #croix6:hover {
 	opacity: 1;
 }
 
+#modal_modif_presta {
+	position: fixed;
+	background-color: white;
+	z-index: 72;
+	left: 0;
+	right: 0;
+	top: 5%;
+	bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 300px;
+	height: 500px;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+	border-radius: 15px;
+	text-align: center;
+}
+
+#modal_modif_presta h2 {
+	margin-top: 20px;
+	margin-left: 35px;
+}
+
+#modal_modif_presta.hidden {
+	display: none;
+}
+
+#modal_modif_presta input {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+textarea {
+	width: 80%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
 
 
 /* ////////////   FIN MODALS /////////////////////////////////////// */
