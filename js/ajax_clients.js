@@ -20,7 +20,7 @@ $(document).ready(function() {
 			const idClient= $(this).attr("id");
 
 
-			$("#profil_client").load("../components/profil_client.php?id="+ idClient +"");
+			$("#profil_client").load("components/profil_client.php?id="+ idClient +"");
 			glisserGauche();
 		});
 

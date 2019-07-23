@@ -58,7 +58,7 @@
 			$resultat = mysqli_query($connexion, $sql);
 
 			while($client = mysqli_fetch_assoc($resultat)) {
-				echo "<div class=\"client\" id=\" ".$client['id']."\">";
+				echo "<div class=\"client\" id=\"".$client['id']."\">";
 				echo "<h4>";
 				echo $client['nom'] ." ". $client['prenom'];
 				echo "</h4>";
