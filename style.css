@@ -415,6 +415,10 @@ main#clients_slider {
 	box-shadow: 5px 5px 4px rgba(0,0,0,0.2);
 }
 
+.container_clients:last-of-type {
+	max-height: 450px;
+}
+
 .container_clients h2 {
 	text-align: center;
 	margin-top: 40px;
