@@ -1,6 +1,6 @@
-<!--------------- MODIFIER UNE PRESTATION -------------------->
+<!--    MODIFIER UNE PRESTATION         -->
 
-	<?php 
+	<?php
 		$id_presta = $_GET['id'];
 			include "bdd.php";
 
@@ -27,7 +27,7 @@
 	?>
 
 	<script type="text/javascript">
-		
+
 			$("#croix6").click(function() {
 				$("#modal_modif_presta").addClass("hidden");
 				$("#noir_modal").addClass("hidden");
@@ -38,4 +38,3 @@
 				$("#noir_modal").addClass("hidden");
 			});
 	</script>
-
