@@ -14,3 +14,6 @@
 			<div class="info_client">
 				<img src ="images/home.png" width="40px" height="40px"><p>Chemin des Oliviers <br> 13352 Trifouillis les Oies</p>
 			</div>
+
+
+			

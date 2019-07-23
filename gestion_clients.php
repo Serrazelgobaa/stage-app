@@ -74,7 +74,7 @@
 
 
 		<div class="container_clients" id="profil_client">
-			<h1>toto</h1>
+			
 		</div>
 	</main>
 

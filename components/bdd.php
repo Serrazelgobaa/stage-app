@@ -1,7 +1,7 @@
 <?php
 	$serveur = "localhost";
 	$username = "root";
-	$mdp = "";
+	$mdp = "root";
 	$bdd = "stage_app";
 
 	$connexion = mysqli_connect($serveur,$username,$mdp,$bdd);
