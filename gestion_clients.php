@@ -73,13 +73,16 @@
 		<!--fin de la liste des clients-->
 
 
-		<div class="container_clients" id="profil_client">
-			
+		<div class="container_clients">
+			<img src="images/croix.png" width="40px" height="40px" id="croix">
+			<div  id="profil_client">
+				
+			</div>
 		</div>
 	</main>
 
 <script type="text/javascript" src="js/main.js"></script>
-
+<script type="text/javascript" src="js/clients.js"></script>
 <script type="text/javascript" src="js/modal.js"></script>
 </body>
 </html>
