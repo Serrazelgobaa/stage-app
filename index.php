@@ -1,5 +1,5 @@
 <?php 
-	include 'bdd.php';
+	include 'components/bdd.php';
 ?>
 
 <!DOCTYPE html>
