@@ -10,7 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="./style.css">
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/ajax_modal.js"></script>
-	<title></title>
+	<title>Prestations</title>
 	<?php
 
   	if(isset($_GET['create'])) {
@@ -19,9 +19,9 @@
 
   						if($create === "true") {
 
-  							$presta_nom = utf8_decode(htmlspecialchars($_POST['nv_presta_nom']));
-  							$presta_desc = utf8_decode(htmlspecialchars($_POST['nv_presta_desc']));
-							$presta_prix = utf8_decode(htmlspecialchars($_POST['nv_presta_prix']));
+  							$presta_nom = htmlspecialchars($_POST['nv_presta_nom']);
+  							$presta_desc = htmlspecialchars($_POST['nv_presta_desc']);
+							$presta_prix = htmlspecialchars($_POST['nv_presta_prix']);
 
   				
 
@@ -47,9 +47,9 @@
   						
   		$edit = $_GET['edit'];
 
-  		$edit_presta_nom = utf8_decode(htmlspecialchars($_POST['edit_presta_nom']));
-  		$edit_presta_desc = utf8_decode(htmlspecialchars($_POST['edit_presta_desc']));
-		$edit_presta_prix = utf8_decode(htmlspecialchars($_POST['edit_presta_prix']));
+  		$edit_presta_nom = htmlspecialchars($_POST['edit_presta_nom']);
+  		$edit_presta_desc = htmlspecialchars($_POST['edit_presta_desc']);
+		$edit_presta_prix = htmlspecialchars($_POST['edit_presta_prix']);
 
   		$sql_edit = "UPDATE prestations SET nom = '".$edit_presta_nom."', description = '".$edit_presta_desc."', prix = '".$edit_presta_prix."' WHERE id=".$edit."";
 
@@ -82,13 +82,13 @@
 					while($prestation = mysqli_fetch_assoc($resultat)) {
 						echo "<div class=\"art_card\"><div class=\"card_header\">";
 						echo "<h2 class=\"titre_client\">";
-						echo utf8_encode($prestation['nom']);
+						echo $prestation['nom'];
 						echo "</h2><div class=\"icon_card\"><img src=\"./images/edit.png\" id=\"".$prestation['id']."\" class=\"icon_edit ".$prestation['id']."\"><a href=\"gestion_prestas.php?delete=".$prestation['id']."\"><img src=\"./images/delete.png\"></a></div></div>";
 						echo "<div class=\"body_card\"><p>";
-						echo utf8_encode($prestation['description']);
+						echo $prestation['description'];
 						echo "</p>";
 						echo "<h3>Tarif : ";
-						echo utf8_encode($prestation['prix']);
+						echo $prestation['prix'];
 						echo " €</h3></div></div>";
 					}
 

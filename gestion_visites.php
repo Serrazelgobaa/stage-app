@@ -25,7 +25,7 @@
     	<form action="gestion_visites.php" method="post">
 
     		<label for="date" name="date"><h4>A partir d'une date :</h4></label>
-    		<input type="date" name="date" id="date">
+    		<input type="datetime-local" name="date" id="date">
     		<h4>Payée</h4>
     		<p><input type="radio" name="payee" id="payee_yes" value="payee_yes"><label for="payee_yes" name="payee_yes">Oui</label>
     		<input type="radio" name="payee" id="payee_no" value="payee_no"><label for="payee_no" name="payee_no">Non</label>

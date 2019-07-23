@@ -1,3 +1,7 @@
+<?php
+	include 'components/bdd.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,44 +24,52 @@
 
 	<main id="clients_slider" class="marge-top">
 		<div class="container_clients">
+
 			<h2 class="titre_client">Clients</h2>
 
-			<div class="client">
-				<h4 id="client1">Nom Prénom</h4>
+	<?php 
+			$sql = "SELECT nom,prenom FROM clients";
+			$resultat = mysqli_query($connexion, $sql);
 
-				<div class="client_icons">
-					<img src="images/edit.png" height="30px" width="30px">
-					<img src="images/delete.png" height="30px" width="30px">
-				</div>
-			</div>
-			<hr noshade>
-			<div class="client">
-				<h4>Nom Prénom</h4>
-
-				<div class="client_icons">
-					<img src="images/edit.png" height="30px" width="30px">
-					<img src="images/delete.png" height="30px" width="30px">
-				</div>
-			</div>
-			<hr noshade>
-			<div class="client">
-				<h4>Nom Prénom</h4>
-
-				<div class="client_icons">
-					<img src="images/edit.png" height="30px" width="30px">
-					<img src="images/delete.png" height="30px" width="30px">
-				</div>
-			</div>
-			<hr noshade>
-			<div class="client">
-				<h4>Nom Prénom</h4>
-
-				<div class="client_icons">
-					<img src="images/edit.png" height="30px" width="30px">
-					<img src="images/delete.png" height="30px" width="30px">
-				</div>
-			</div>
+			while($client = mysqli_fetch_assoc($resultat)) {
+				echo "<div class=\"client\">";
+				echo "<h4>";
+				echo $client['nom'] ." ". $client['prenom'];
+				echo "</h4>";
+				echo "<div class=\"client_icons\">";
+				echo "<img src=\"./images/edit.png\" height=\"30px\" width=\"30px\">";
+				echo "<img src=\"./images/delete.png\" height=\"30px\" width=\"30px\">";
+				echo "</div> </div>";
+				echo "<hr></hr>";
+			}
+	?>
 		</div>
+		<!--fin de la liste des clients-->
+
+		<!-- ajout nouveaux clients-->
+	<?php
+
+		if(isset($_GET['create'])) {
+			$create = $_GET['create'];
+
+			if($create === "true") {
+				$client_nom = htmlspecialchars($_POST['nv_client_nom']);
+				$client_prenom = htmlspecialchars($_POST['nv_client_prenom']);
+				$client_adresse = htmlspecialchars($_POST['nv_client_adresse']);
+				$client_cp = htmlspecialchars($_POST['nv_client_cp']);
+				$client_ville = htmlspecialchars($_POST['nv_client_ville']);
+				$client_tel = htmlspecialchars($_POST['nv_client_tel']);
+				$client_mail = htmlspecialchars($_POST['nv_client_mail']);
+
+			$sql_insertion = "INSERT INTO clients (nom,prenom,adresse,code_postal,ville,telephone,mail) VALUES('".$client_nom."', '".$client_prenom."', '".$client_adresse."', '".$client_cp."', '".$client_ville."', ".$client_tel.", '".$client_mail."')";
+
+			mysqli_query($connexion, $sql_insertion);
+
+			}
+		}
+
+	?>
+<!-- /////////////////////////////////////////////////////////////-->
 
 		<div class="container_clients">
 			<img src="images/croix.png" width="40px" height="40px" id="croix">

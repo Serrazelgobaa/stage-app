@@ -2,19 +2,22 @@
 </div>
 
 <!------------- AJOUTER UN NOUVEAU CLIENT ---------------->
-
+<!--li9 ...?create=true pointe vers mon ajout de nouveaux clients -->
 
 <div id="modal_creation_client" class="hidden">
 	<img src="images/croix.png" id="croix3" width="35px" height="35px">
-	<form action="gestion_clients.php" method="post">
+	<form action="gestion_clients.php?create=true" method="post">
 		<h2>Nouveau client</h2>
 		<label for="nv_client_nom" name="nv_client_nom">Nom : </label><br><input type="text" name="nv_client_nom" id="nv_client_nom"><br>
 		<label for="nv_client_prenom" name="nv_client_prenom">Prénom : </label><br><input type="text" name="nv_client_prenom" id="nv_client_prenom"><br>
-		<label for="nv_client_tel" name="nv_client_tel">Numéro de téléphone : </label><br><input type="text" name="nv_client_tel" id="nv_client_tel"><br>
-		<label for="nv_client_mail" name="nv_client_mail">Adresse email : </label><br><input type="text" name="nv_client_mail" id="nv_client_mail"><br>
 		<label for="nv_client_adresse" name="nv_client_adresse">Adresse : </label><br><input type="text" name="nv_client_adresse" id="nv_client_adresse"><br>
 		<label for="nv_client_cp" name="nv_client_cp">Code postal : </label><br><input type="text" name="nv_client_cp" id="nv_client_cp"><br>
 		<label for="nv_client_ville" name="nv_client_ville">Ville : </label><br><input type="text" name="nv_client_ville" id="nv_client_ville"><br>
+		<label for="nv_client_tel" name="nv_client_tel">Numéro de téléphone : </label><br><input type="text" name="nv_client_tel" id="nv_client_tel"><br>
+		<label for="nv_client_mail" name="nv_client_mail">Adresse email : </label><br><input type="text" name="nv_client_mail" id="nv_client_mail"><br>
+		
+		
+		
 		<input type="submit" value="Ajouter le client" class="submit_modal">
 
 	</form>
@@ -48,5 +51,4 @@
 	</form>
 </div>
 
-<!--------------- MODIFIER UNE PRESTATION -------------------->
 
