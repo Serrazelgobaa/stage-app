@@ -384,6 +384,7 @@ article {
 #clients_page {
 	width: 100%;
 	overflow-x: hidden; 
+	height: 100%;
 }
 
 #croix {
@@ -401,7 +402,7 @@ article {
 main#clients_slider {
 	display: flex;
 	flex-wrap: nowrap;
-	width: 200%
+	width: 200%;
 }
 
 .container_clients {

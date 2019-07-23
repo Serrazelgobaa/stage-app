@@ -9,6 +9,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"> 
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/ajax_clients.js"></script>
 	<title></title>
 	<!-- ajout nouveaux clients-->
 	<?php
@@ -56,7 +58,7 @@
 			$resultat = mysqli_query($connexion, $sql);
 
 			while($client = mysqli_fetch_assoc($resultat)) {
-				echo "<div class=\"client ".$client['id']."\">";
+				echo "<div class=\"client\" id=\" ".$client['id']."\">";
 				echo "<h4>";
 				echo $client['nom'] ." ". $client['prenom'];
 				echo "</h4>";
@@ -71,24 +73,13 @@
 		<!--fin de la liste des clients-->
 
 
-		<div class="container_clients">
-			<img src="images/croix.png" width="40px" height="40px" id="croix">
-			<h2>Nom Prénom</h2>
-
-			<div class="info_client">
-				<img src ="images/phone.png" width="40px" height="40px"><p>00.00.00.00.00</p>
-			</div>
-			<div class="info_client">
-				<img src ="images/mail.png" width="40px" height="40px"><p>nom.prenom@gmail.com</p>
-			</div>
-			<div class="info_client">
-				<img src ="images/home.png" width="40px" height="40px"><p>Chemin des Oliviers <br> 13352 Trifouillis les Oies</p>
-			</div>
+		<div class="container_clients" id="profil_client">
+			<h1>toto</h1>
 		</div>
 	</main>
 
 <script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="js/clients.js"></script>
+
 <script type="text/javascript" src="js/modal.js"></script>
 </body>
 </html>
