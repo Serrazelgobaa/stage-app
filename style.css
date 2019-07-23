@@ -241,6 +241,10 @@ hr {
 	opacity: 0.5;
 }
 
+hr:last-of-type {
+	display: none;
+}
+
 .section_body {
 	width: 100%;
 	height: 90%;
@@ -404,6 +408,7 @@ main#clients_slider {
 	width: 96%;
 	margin-left: 2%;
 	margin-right: 2%;
+	margin-bottom: 50px;
 	background-color: white;
 	box-sizing: border-box;
 	box-shadow: 5px 5px 4px rgba(0,0,0,0.2);
