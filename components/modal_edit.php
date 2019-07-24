@@ -9,9 +9,9 @@
 
 		while($prestation_modif = mysqli_fetch_assoc($resultat_modif)) {
 
-			$prestation_modif_nom = utf8_encode($prestation_modif['nom']);
-			$prestation_modif_desc = utf8_encode($prestation_modif['description']);
-			$prestation_modif_prix = utf8_encode($prestation_modif['prix']);
+			$prestation_modif_nom = $prestation_modif['nom'];
+			$prestation_modif_desc = $prestation_modif['description'];
+			$prestation_modif_prix = $prestation_modif['prix'];
 
 				echo "<div id=\"modal_modif_presta\">";
 				echo "<img src=\"images/croix.png\" id=\"croix6\" width=\"35px\" height=\"35px\">";

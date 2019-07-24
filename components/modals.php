@@ -2,7 +2,7 @@
 </div>
 
 <!------------- AJOUTER UN NOUVEAU CLIENT ---------------->
-<!--li9 ...?create=true pointe vers mon ajout de nouveaux clients -->
+
 
 <div id="modal_creation_client" class="hidden">
 	<img src="images/croix.png" id="croix3" width="35px" height="35px">

@@ -425,6 +425,17 @@ main#clients_slider {
 	font-weight: 700;
 }
 
+.container_clients img {	
+	width: 30px;
+	height: 30px;
+	opacity: 0.6;
+	cursor: pointer;
+}
+
+.container_clients img:hover {	
+	opacity: 1;
+}
+
 .info_client {
 	display: flex;
 	align-items: center;

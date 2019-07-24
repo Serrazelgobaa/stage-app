@@ -36,6 +36,20 @@
 
 	?>
 <!-- /////////////////////////////////////////////////////////////-->
+<!--              SUPPRESSION CLIENTS                 -->
+
+	<?php
+		if(isset($_GET['delete'])) {
+
+  			$delete = $_GET['delete'];
+
+  		$sql_supprime_client = "DELETE FROM clients WHERE id=$delete";
+
+  		mysqli_query($connexion, $sql_supprime_client);
+  	}
+  	?>
+ <!-- /////////////////////////////////////////////////////////////-->
+
 </head>
 <body class="grey" id="clients_page">
 	
@@ -64,7 +78,8 @@
 				echo "</h4>";
 				echo "<div class=\"client_icons\">";
 				echo "<img src=\"./images/edit.png\" height=\"30px\" width=\"30px\">";
-				echo "<img src=\"./images/delete.png\" height=\"30px\" width=\"30px\">";
+
+				echo "<a href=\"gestion_clients.php?delete=".$client['id']."\"><img src=\"./images/delete.png\" height=\"30px\" width=\"30px\"/></a>";
 				echo "</div> </div>";
 				echo "<hr>";
 			}
