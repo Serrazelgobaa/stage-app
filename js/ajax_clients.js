@@ -20,4 +20,23 @@ $(document).ready(function() {
 		
 	});
 
+/* un peu d'ajax :) pour chaque icone crayon, si clic dessus on obtient l'id de
+ce client ///////////////////////////// */
+$(document).ready(function() {
+
+	$(".icon_edit").each(function() {
+		$(this).click(function() {
+
+			const idIcon= $(this).attr("id");
+
+
+			$("#container_modal").load("components/modal_edit_client.php?id="+ idIcon +"");
+			$("#noir_modal").removeClass("hidden");
+			$("#modal_modif_client").removeClass("hidden");
+		});
+
+	});
+		
+	});
+
 

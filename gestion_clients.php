@@ -48,6 +48,27 @@
   		mysqli_query($connexion, $sql_supprime_client);
   	}
   	?>
+<!-- ///////////////////////////////////////////////////////////// -->
+<!--            MODIFS CLIENTS                 -->
+	<?php
+  	  	/*if(isset($_GET['edit'])) {
+  						
+  		$edit = $_GET['edit'];
+
+  		$edit_client_nom = htmlspecialchars($_POST['edit_client_nom']);
+  		$edit_client_prenom = htmlspecialchars($_POST['edit_client_prenom']);
+		$edit_client_adr = htmlspecialchars($_POST['edit_client_adr']);
+		$edit_client_cp = htmlspecialchars($_POST)['edit_client_cp']);
+		$edit_client_ville = htmlspecialchars($_POST)['edit_client_ville']);
+		$edit_client_telephone = htmlspecialchars($_POST)['edit_client_telephone']);
+		$edit_client_mail = htmlspecialchars($_POST)['edit_client_mail']);
+
+  		$sql_edit = "UPDATE clients SET nom = '".$edit_client_nom."', prenom = '".$edit_client_prenom."', adresse = '".$edit_client_adr."', code_postal = '".$edit_client_cp."', ville = '".$edit_client_ville."', telephone = '".$edit_client_telephone."', mail = '".$edit_client_mail."' WHERE id=".$edit."";
+
+  		mysqli_query($connexion, $sql_edit);
+  	}*/
+  	?>
+  	
  <!-- /////////////////////////////////////////////////////////////-->
 
 </head>
@@ -63,6 +84,8 @@
 	</div>
 
 	<main id="clients_slider" class="marge-top">
+		<div id="container_modal"></div>
+
 		<div class="container_clients">
 
 			<h2 class="titre_client">Clients</h2>
@@ -77,7 +100,7 @@
 				echo $client['nom'] ." ". $client['prenom'];
 				echo "</h4>";
 				echo "<div class=\"client_icons\">";
-				echo "<img src=\"./images/edit.png\" height=\"30px\" width=\"30px\">";
+				echo "<img src=\"./images/edit.png\" class=\"icon_edit ".$client['id']."\" id=\"".$client['id']."\" height=\"30px\" width=\"30px\">";
 
 				echo "<a href=\"gestion_clients.php?delete=".$client['id']."\"><img src=\"./images/delete.png\" height=\"30px\" width=\"30px\"/></a>";
 				echo "</div> </div>";
