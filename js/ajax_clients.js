@@ -6,7 +6,7 @@ const glisserGauche = () => {
 
 $(document).ready(function() {
 
-	$(".client").each(function() {
+	$(".client_titre").each(function() {
 		$(this).click(function() {
 
 			const idClient= $(this).attr("id");
@@ -32,7 +32,7 @@ $(document).ready(function() {
 
 			$("#container_modal").load("components/modal_edit_client.php?id="+ idIcon +"");
 			$("#noir_modal").removeClass("hidden");
-			$("#modal_modif_client").removeClass("hidden");
+			$("#modal_edit_client").removeClass("hidden");
 		});
 
 	});

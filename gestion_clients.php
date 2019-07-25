@@ -14,10 +14,8 @@
 	<title></title>
 	<!-- ajout nouveaux clients-->
 	<?php
-
 		if(isset($_GET['create'])) {
 			$create = $_GET['create'];
-
 			if($create === "true") {
 				$client_nom = htmlspecialchars($_POST['nv_client_nom']);
 				$client_prenom = htmlspecialchars($_POST['nv_client_prenom']);
@@ -27,13 +25,11 @@
 				$client_tel = htmlspecialchars($_POST['nv_client_tel']);
 				$client_mail = htmlspecialchars($_POST['nv_client_mail']);
 
-			$sql_insertion = "INSERT INTO clients (nom,prenom,adresse,code_postal,ville,telephone,mail) VALUES('".$client_nom."', '".$client_prenom."', '".$client_adresse."', '".$client_cp."', '".$client_ville."', ".$client_tel.", '".$client_mail."')";
-
-			mysqli_query($connexion, $sql_insertion);
-
+				$sql_insertion = "INSERT INTO clients (nom,prenom,adresse,code_postal,ville,telephone,mail) VALUES('".$client_nom."', '".$client_prenom."', '".$client_adresse."', '".$client_cp."', '".$client_ville."', '".$client_tel."', '".$client_mail."')";
+				
+				mysqli_query($connexion, $sql_insertion);
 			}
 		}
-
 	?>
 <!-- /////////////////////////////////////////////////////////////-->
 <!--              SUPPRESSION CLIENTS                 -->
@@ -51,22 +47,22 @@
 <!-- ///////////////////////////////////////////////////////////// -->
 <!--            MODIFS CLIENTS                 -->
 	<?php
-  	  	/*if(isset($_GET['edit'])) {
+  	  	if(isset($_GET['edit'])) {
   						
   		$edit = $_GET['edit'];
 
   		$edit_client_nom = htmlspecialchars($_POST['edit_client_nom']);
   		$edit_client_prenom = htmlspecialchars($_POST['edit_client_prenom']);
 		$edit_client_adr = htmlspecialchars($_POST['edit_client_adr']);
-		$edit_client_cp = htmlspecialchars($_POST)['edit_client_cp']);
-		$edit_client_ville = htmlspecialchars($_POST)['edit_client_ville']);
-		$edit_client_telephone = htmlspecialchars($_POST)['edit_client_telephone']);
-		$edit_client_mail = htmlspecialchars($_POST)['edit_client_mail']);
+		$edit_client_cp = htmlspecialchars($_POST['edit_client_cp']);
+		$edit_client_ville = htmlspecialchars($_POST['edit_client_ville']);
+		$edit_client_tel = htmlspecialchars($_POST['edit_client_tel']);
+		$edit_client_mail = htmlspecialchars($_POST['edit_client_mail']);
 
-  		$sql_edit = "UPDATE clients SET nom = '".$edit_client_nom."', prenom = '".$edit_client_prenom."', adresse = '".$edit_client_adr."', code_postal = '".$edit_client_cp."', ville = '".$edit_client_ville."', telephone = '".$edit_client_telephone."', mail = '".$edit_client_mail."' WHERE id=".$edit."";
+  		$sql_edit = "UPDATE clients SET nom = '".$edit_client_nom."', prenom = '".$edit_client_prenom."', adresse = '".$edit_client_adr."', code_postal = '".$edit_client_cp."', ville = '".$edit_client_ville."', telephone = '".$edit_client_tel."', mail = '".$edit_client_mail."' WHERE id=".$edit."";
 
   		mysqli_query($connexion, $sql_edit);
-  	}*/
+  	}
   	?>
   	
  <!-- /////////////////////////////////////////////////////////////-->
@@ -83,8 +79,10 @@
 		<a href="#" id="create_button" class="create_client"><img src="images/add_circle.png">Nouveau client</a>
 	</div>
 
+	<div id="container_modal"></div>
+
 	<main id="clients_slider" class="marge-top">
-		<div id="container_modal"></div>
+		
 
 		<div class="container_clients">
 
@@ -95,8 +93,8 @@
 			$resultat = mysqli_query($connexion, $sql);
 
 			while($client = mysqli_fetch_assoc($resultat)) {
-				echo "<div class=\"client\" id=\"".$client['id']."\">";
-				echo "<h4>";
+				echo "<div class=\"client\">";
+				echo "<h4 class=\"client_titre\" id=\"".$client['id']."\">";
 				echo $client['nom'] ." ". $client['prenom'];
 				echo "</h4>";
 				echo "<div class=\"client_icons\">";
@@ -104,7 +102,7 @@
 
 				echo "<a href=\"gestion_clients.php?delete=".$client['id']."\"><img src=\"./images/delete.png\" height=\"30px\" width=\"30px\"/></a>";
 				echo "</div> </div>";
-				echo "<hr>";
+				echo "<hr class=\"client_separateur\">";
 			}
 	?>
 		</div>
