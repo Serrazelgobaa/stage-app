@@ -1,3 +1,7 @@
+<?php
+  include "components/bdd.php";
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,7 +29,7 @@
     	<form action="gestion_visites.php" method="post">
 
     		<label for="date" name="date"><h4>A partir d'une date :</h4></label>
-    		<input type="datetime-local" name="date" id="date">
+    		<input type="date" name="date" id="date">
     		<h4>Payée</h4>
     		<p><input type="radio" name="payee" id="payee_yes" value="payee_yes"><label for="payee_yes" name="payee_yes">Oui</label>
     		<input type="radio" name="payee" id="payee_no" value="payee_no"><label for="payee_no" name="payee_no">Non</label>
@@ -58,9 +62,49 @@
    		<img src="images/tune.png" width="50px" height="50px">
    	</div>
 
-   	<main>
+   	<main id="visites_aside">
+      <?php
+        $sql = "SELECT visites.*, clients.nom AS client_nom, clients.prenom AS client_prenom FROM visites INNER JOIN clients ON visites.clients_id=clients.id";
+            $resultat = mysqli_query($connexion, $sql);
 
-   	</main>
+              while($visite = mysqli_fetch_assoc($resultat)) {
+                echo "<div class=\"carte_visite\">";
+                echo "<div class=\"card_header\">";
+                echo "<div class=\"check_icons\">";
+
+                if($visite['effectuee'] == 1) {
+                  echo "<img src=\"images/check.png\" width=\"30px\" height=\"30px\"><p>Terminée</p>";
+                }
+
+                else {
+                   echo "<img src=\"images/uncheck.png\" width=\"30px\" height=\"30px\"><p>En cours</p>";
+                }
+
+                if($visite['payee'] == 1) {
+                  echo "<img src=\"images/paid.png\" width=\"30px\" height=\"30px\"><p>Payée</p>";
+                }
+
+                else {
+                  echo "<img src=\"images/unpaid.png\" width=\"30px\" height=\"30px\"><p>Non-payée</p>";
+                }
+
+                echo "</div><div class=\"icon_card\"><img src=\"images/edit.png\" width=\"35px\" height=\"35px\"><img src=\"images/delete.png\" width=\"35px\" height=\"35px\"></div>";
+
+                echo "</div>";
+                echo "<div class=\"carte_body card_body\">";
+                echo "<h2>Chez ".$visite['client_nom']." ".$visite['client_prenom']."</h2>";
+                echo "<p>Le ".$visite['date']." à ".$visite['heure']."</p>";
+                echo "<p><span class=\"bold\">Prestations : Installation d'imprimante, sauvegarde de données</span></p>";
+                echo " <h3>Prix total: ".$visite['prix_total']."€</h3>";
+                echo "</div></div>";
+
+              }
+      ?>
+      
+</main>        
+          
+         
+       
 
 
 
