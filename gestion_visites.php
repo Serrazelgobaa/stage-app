@@ -26,7 +26,7 @@
 
     	<a href="#" id="create_button2"><img src="images/add_circle.png">Nouvelle visite</a>
     	<h3>Filtres</h3>
-    	<form action="gestion_visites.php" method="post">
+    	<form action="gestion_visites.php?filters=true" method="post">
 
     		<label for="date" name="date"><h4>A partir d'une date :</h4></label>
     		<input type="date" name="date" id="date">
@@ -42,16 +42,36 @@
 
     		<h4>Par prestation</h4>
 
-    		<select name="choix_presta" id="choix_presta">
-    			<option value="">Choisissez la prestation</option>
-    			<option value="1">Presta 1</option>
-    			<option value="2">Presta 2</option>
-    			<option value="3">Presta 3</option>
-    			<option value="4">Presta 4</option>
+        <select name="choix_presta" id="choix_presta">
+          <option value="">Choisissez la prestation</option>
+
+        <?php
+          $sql_presta_liste = "SELECT id,nom FROM prestations";
+
+          $presta_liste_query = mysqli_query($connexion,$sql_presta_liste);
+
+          while($presta_opt = mysqli_fetch_assoc($presta_liste_query)) {
+              echo "<option value=\"".$presta_opt['id']."\">".$presta_opt['nom']."</option>";
+          }
+        ?>
+
     		</select>
 
-    		<label for="nom_client" name="nom_client"><h4>Par nom du client :</h4></label>
-    		<input type="text" name="nom_client" id="nom_client"><br>
+    		<h4>Par nom du client :</h4>
+    		<select name="nom_client" id="nom_client">
+          <option value="">Nom du Client</option>
+
+        <?php
+          $sql_clients_liste = "SELECT id,nom,prenom FROM clients";
+
+          $clients_liste_query = mysqli_query($connexion,$sql_clients_liste);
+
+          while($clients_opt = mysqli_fetch_assoc($clients_liste_query)) {
+              echo "<option value=\"".$clients_opt['id']."\">".$clients_opt['prenom']." ".$clients_opt['nom']."</option>";
+          }
+        ?>
+
+        </select>
 
     		<input type="submit" value="Valider" id="create_button" class="valider">
 
@@ -64,8 +84,61 @@
 
    	<main id="visites_aside">
       <?php
-        $sql = "SELECT visites.*, clients.nom AS client_nom, clients.prenom AS client_prenom FROM visites INNER JOIN clients ON visites.clients_id=clients.id";
 
+      if (isset($_GET['filters']) && $_GET['filters'] == "true") {
+
+        $filtres = array();
+
+        //Vérification de la caractéristique "visite payée"
+
+        if(isset($_POST['payee'])) {
+
+          if($_POST['payee'] == "payee_no") {
+
+            $filtres[] = "payee=0";
+          }
+
+          else if ($_POST['payee'] == "payee_yes") {
+            $filtres[] = "payee=1";
+          }
+
+        }
+
+        //Vérification de la caractéristique "visite effectuée"
+
+        if(isset($_POST['faite'])) {
+
+          if($_POST['faite'] == "faite_no") {
+            $filtres[] = "effectuee=0";
+          }
+
+          else if ($_POST['faite'] == "faite_yes") {
+            $filtres[] = "effectuee=1";
+          }
+        }
+
+        //S'il y a des filtres, on en fait une partie de la requête SQL
+
+        if(!empty($filtres)) {
+          $filtres_query = "WHERE ".join(" AND ",$filtres);
+
+          $sql = "SELECT visites.*, clients.nom AS client_nom, clients.prenom AS client_prenom FROM visites INNER JOIN clients ON visites.clients_id=clients.id ".$filtres_query."";
+
+        }
+
+        else {
+          $sql = "SELECT visites.*, clients.nom AS client_nom, clients.prenom AS client_prenom FROM visites INNER JOIN clients ON visites.clients_id=clients.id";
+
+
+        }
+
+      }
+
+      else {
+
+
+        $sql = "SELECT visites.*, clients.nom AS client_nom, clients.prenom AS client_prenom FROM visites INNER JOIN clients ON visites.clients_id=clients.id";
+      }
         
 
             $resultat = mysqli_query($connexion, $sql);
@@ -116,6 +189,7 @@
                 echo "</div></div>";
 
               }
+            
       ?>
       
 </main>        
