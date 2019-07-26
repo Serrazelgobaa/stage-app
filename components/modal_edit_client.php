@@ -24,7 +24,7 @@ il faut rajouter ds le css le modal_modif_client       -->
 			echo "<h2>Modifier client</h2>";
 			echo "<label for=\"edit_client_nom\" name=\"edit_client_nom\">Nom : </label><br><input type=\"text\" name=\"edit_client_nom\" id=\"edit_client_nom\" value=\"".$client_modif_nom."\"><br>";
 			echo "<label for=\"edit_client_prenom\" name=\"edit_client_prenom\">Prénom : </label><br><input type=\"text\" name=\"edit_client_prenom\" id=\"edit_client_prenom\" value=\"".$client_modif_prenom."\"><br>";
-			echo "<label for=\"edit_client_adresse\" name=\"edit_client_adresse\">Adresse : </label><br><input type=\"text\" name=\"edit_client_adresse\" id=\"edit_client_adresse\" value=\"".$client_modif_adr."\"><br>";
+			echo "<label for=\"edit_client_adr\" name=\"edit_client_adr\">Adresse : </label><br><input type=\"text\" name=\"edit_client_adr\" id=\"edit_client_adr\" value=\"".$client_modif_adr."\"><br>";
 			echo "<label for=\"edit_client_cp\" name=\"edit_client_cp\">Code postal : </label><br><input type=\"text\" name=\"edit_client_cp\" id=\"edit_client_cp\" value=\"".$client_modif_cp."\"><br>";
 			echo "<label for=\"edit_client_ville\" name=\"edit_client_ville\">Ville : </label><br><input type=\"text\" name=\"edit_client_ville\" id=\"edit_client_ville\" value=\"".$client_modif_ville."\"><br>";
 			echo "<label for=\"edit_client_tel\" name=\"edit_client_tel\">Numéro de téléphone : </label><br><input type=\"text\" name=\"edit_client_tel\" id=\"edit_client_tel\" value=\"".$client_modif_tel."\"><br>";
