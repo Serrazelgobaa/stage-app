@@ -9,6 +9,17 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<title></title>
+	
+<?php 
+    	if(isset($_GET['delete'])) {
+
+      		$delete = $_GET['delete'];
+
+      		$sql_supp = "DELETE FROM visites WHERE id=$delete";
+
+      		mysqli_query($connexion, $sql_supp);
+    	}
+  ?>
 </head>
 <body class="grey">
 
@@ -166,7 +177,7 @@
                   echo "<img src=\"images/unpaid.png\" width=\"30px\" height=\"30px\"><p>Non-payée</p>";
                 }
 
-                echo "</div><div class=\"icon_card\"><img src=\"images/edit.png\" width=\"35px\" height=\"35px\"><img src=\"images/delete.png\" width=\"35px\" height=\"35px\"></div>";
+                echo "</h2></div><div class=\"icon_card\"><img src=\"./images/edit.png\" id=\"".$visite['id']."\" class=\"icon_edit ".$visite['id']."\"><a href=\"gestion_visites.php?delete=".$visite['id']."\"><img src=\"./images/delete.png\"></a></div>";
 
                 echo "</div>";
 
