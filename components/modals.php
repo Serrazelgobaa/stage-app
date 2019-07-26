@@ -1,3 +1,7 @@
+<?php
+include"bdd.php";
+?>
+
 <div id="noir_modal" class="hidden">
 </div>
 
@@ -34,7 +38,19 @@
 		<label for ="nv_visite_heure" name="nv_visite_heure">et heure :</label><br>
 		<input type="time" name="nv_visite_heure" id="nv_visite_heure"><br>
 		<label for="nv_visite_prix_total" name="nv_visite_prix_total">Prix Total :</label><br>
-		<input type="text" name="nv_visite_prix_total" id="nv_visite_prix_total"><br>
+		<input type="text" name="nv_visite_prix_total" id="nv_visite_prix_total"><br><br>
+
+		
+		<select name="quel_clients" id="quel_clients">
+			<option value="">Sélectionner un client :</option>
+			<?php
+				$sql = "SELECT nom FROM clients ";
+				$res = mysqli_query($connexion, $sql);
+				while($quel_client=mysqli_fetch_assoc($res)) {
+					echo '<option>'.$quel_client["nom"].'</option>';
+				}
+			?>
+		</select><br>
 
 		
 		<input type="submit" value="Ajouter la visite" class="submit_modal">
