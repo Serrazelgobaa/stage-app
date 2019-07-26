@@ -79,7 +79,18 @@
 								echo " ";
 								echo $visite['client_prenom'];
 								echo "</h3>";
-								echo "<p>Prestation : Récupération de données</p>";
+								echo "<p>Prestation(s) :";
+
+								$sql_presta_liste2 = "SELECT visites_prestations.*, prestations.nom AS nom_presta FROM visites_prestations INNER JOIN prestations ON visites_prestations.prestations_id=prestations.id WHERE visites_id=".$visite['id']."";
+
+                 				$resultat_presta2 = mysqli_query($connexion, $sql_presta_liste2);
+
+                 			while($presta_liste2 = mysqli_fetch_assoc($resultat_presta2)) {
+                  				echo $presta_liste2['nom_presta'];
+                  				echo " | ";
+                			}
+
+								echo "</p>";
 								echo "</div><div class=\"carte_footer\"><p>";
 								echo $visite['date'];
 								echo "</p></div></div>";
@@ -95,16 +106,38 @@
 			<section>
 				<div class="section_body">
 					<h2>Impayés</h2>
-					<div class="carte_visite">
-						<div class="carte_body">
-							<p class="impaye">31€</p><h3>Installation d'imprimante</h3>
-							<p>Client : M. Bidule</p>
-						</div>
 
-						<div class="carte_footer">
-							<p>Visite effectuée le 25/03/2019</p>
-						</div>
-					</div>
+					<?php
+						$sql_impaye = "SELECT visites.*, clients.nom AS client_nom, clients.prenom AS client_prenom FROM visites INNER JOIN clients ON visites.clients_id=clients.id WHERE payee=0";
+
+						$resultat_impaye = mysqli_query($connexion,$sql_impaye);
+
+						while($impaye = mysqli_fetch_assoc($resultat_impaye)) {
+							echo "<div class=\"carte_visite\">";
+							echo "<div class=\"carte_body\">";
+							echo "<p class=\"impaye\">";
+							echo $impaye['prix_total']." €";
+							echo "</p><h3>";
+
+							$sql_presta_liste = "SELECT visites_prestations.*, prestations.nom AS nom_presta FROM visites_prestations INNER JOIN prestations ON visites_prestations.prestations_id=prestations.id WHERE visites_id=".$impaye['id']."";
+
+                 			$resultat_presta = mysqli_query($connexion, $sql_presta_liste);
+
+                 			while($presta_liste = mysqli_fetch_assoc($resultat_presta)) {
+                  				echo $presta_liste['nom_presta'];
+                  				echo " | ";
+                			}
+
+							echo "</h3>";
+							echo "<p>Client : ".$impaye['client_prenom']." ".$impaye['client_nom']."</p>";
+							echo "</div>";
+							echo "<div class=\"carte_footer\">";
+							echo "<p>Visite effectuée le ".$impaye['date']."</p>";
+							echo "</div></div>";
+						}
+					?>
+					
+						
 				</div>
 
 				<div class="section_footer">
