@@ -65,9 +65,14 @@
    	<main id="visites_aside">
       <?php
         $sql = "SELECT visites.*, clients.nom AS client_nom, clients.prenom AS client_prenom FROM visites INNER JOIN clients ON visites.clients_id=clients.id";
+
+        
+
             $resultat = mysqli_query($connexion, $sql);
 
               while($visite = mysqli_fetch_assoc($resultat)) {
+
+
                 echo "<div class=\"carte_visite\">";
                 echo "<div class=\"card_header\">";
                 echo "<div class=\"check_icons\">";
@@ -91,10 +96,22 @@
                 echo "</div><div class=\"icon_card\"><img src=\"images/edit.png\" width=\"35px\" height=\"35px\"><img src=\"images/delete.png\" width=\"35px\" height=\"35px\"></div>";
 
                 echo "</div>";
+
+                 $sql_presta_liste = "SELECT visites_prestations.*, prestations.nom AS nom_presta FROM visites_prestations INNER JOIN prestations ON visites_prestations.prestations_id=prestations.id WHERE visites_id=".$visite['id']."";
+
+                 $resultat_presta = mysqli_query($connexion, $sql_presta_liste);
+
                 echo "<div class=\"carte_body card_body\">";
                 echo "<h2>Chez ".$visite['client_nom']." ".$visite['client_prenom']."</h2>";
                 echo "<p>Le ".$visite['date']." à ".$visite['heure']."</p>";
-                echo "<p><span class=\"bold\">Prestations : Installation d'imprimante, sauvegarde de données</span></p>";
+                echo "<p><span class=\"bold\">Prestations : ";
+
+                while($presta_liste = mysqli_fetch_assoc($resultat_presta)) {
+                  echo $presta_liste['nom_presta'];
+                  echo " | ";
+                }
+
+                echo "</span></p>";
                 echo " <h3>Prix total: ".$visite['prix_total']."€</h3>";
                 echo "</div></div>";
 
