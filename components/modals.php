@@ -29,7 +29,13 @@
 	<img src="images/croix.png" id="croix4" width="35px" height="35px">
 	<form action="gestion_visites.php" method="post">
 		<h2>Nouvelle visite</h2>
-		<label for="nv_visite_date" name="nv_visite_date">Date et heure : </label><br><input type="datetime" name="nv_visite_date" id="nv_visite_date"><br>
+		<label for="nv_visite_date" name="nv_visite_date">Date  </label><br>
+		<input type="datetime" name="nv_visite_date" id="nv_visite_date"><br>
+		<label for ="nv_visite_heure" name="nv_visite_heure">et heure :</label><br>
+		<input type="time" name="nv_visite_heure" id="nv_visite_heure"><br>
+		<label for="nv_visite_prix_total" name="nv_visite_prix_total">Prix Total :</label><br>
+		<input type="text" name="nv_visite_prix_total" id="nv_visite_prix_total"><br>
+
 		
 		<input type="submit" value="Ajouter la visite" class="submit_modal">
 
