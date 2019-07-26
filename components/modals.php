@@ -5,7 +5,7 @@ include"bdd.php";
 <div id="noir_modal" class="hidden">
 </div>
 
-<!------------- AJOUTER UN NOUVEAU CLIENT ---------------->
+<!--               AJOUTER UN NOUVEAU CLIENT ---------------->
 
 
 <div id="modal_creation_client" class="hidden">
@@ -19,15 +19,15 @@ include"bdd.php";
 		<label for="nv_client_ville" name="nv_client_ville">Ville : </label><br><input type="text" name="nv_client_ville" id="nv_client_ville"><br>
 		<label for="nv_client_tel" name="nv_client_tel">Numéro de téléphone : </label><br><input type="text" name="nv_client_tel" id="nv_client_tel"><br>
 		<label for="nv_client_mail" name="nv_client_mail">Adresse email : </label><br><input type="text" name="nv_client_mail" id="nv_client_mail"><br>
-		
-		
-		
+
+
+
 		<input type="submit" value="Ajouter le client" class="submit_modal">
 
 	</form>
 </div>
 
-<!------------- AJOUTER UNE NOUVELLE VISITE ---------------->
+<!--            AJOUTER UNE NOUVELLE VISITE ---------------->
 
 <div id="modal_creation_visite" class="hidden">
 	<img src="images/croix.png" id="croix4" width="35px" height="35px">
@@ -40,7 +40,7 @@ include"bdd.php";
 		<label for="nv_visite_prix_total" name="nv_visite_prix_total">Prix Total :</label><br>
 		<input type="text" name="nv_visite_prix_total" id="nv_visite_prix_total"><br><br>
 
-		
+
 		<select name="quel_clients" id="quel_clients">
 			<option value="">Sélectionner un client :</option>
 			<?php
@@ -52,7 +52,7 @@ include"bdd.php";
 			?>
 		</select><br>
 
-		
+
 		<input type="submit" value="Ajouter la visite" class="submit_modal">
 
 	</form>
@@ -67,7 +67,7 @@ include"bdd.php";
 		<label for="nv_presta_nom" name="nv_presta_nom">Nom : </label><br><input type="text" name="nv_presta_nom" id="nv_presta_nom"><br>
 		<label for="nv_presta_desc" name="nv_presta_desc">Description : </label><br><textarea name="nv_presta_desc" id="nv_presta_nom"></textarea><br>
 		<label for="nv_presta_prix" name="nv_presta_prix">Tarif : </label><br><input type="text" name="nv_presta_prix" id="nv_presta_prix"> €<br>
-		
+
 		<input type="submit" value="Ajouter la prestation" class="submit_modal" name="submit">
 
 	</form>
